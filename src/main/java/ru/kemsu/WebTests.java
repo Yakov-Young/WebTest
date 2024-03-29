@@ -87,7 +87,7 @@ public class WebTests {
         );
         driver.findElement(
                 By.xpath("//input[@class='input-0-2-71']")
-        ).sendKeys("professionaltester");
+        ).sendKeys("testich.testovyy");
 
         // Переход к форме ввода пароля
         timeout(driver,2);
@@ -99,7 +99,7 @@ public class WebTests {
         timeout(driver, 2);
         driver.findElement(
                 By.xpath("//input[@class='input-0-2-71 withIcon-0-2-72']")
-        ).sendKeys("toptester123");
+        ).sendKeys("OU3PAi3erto*");
 
         // Вход
         timeout(driver, 2);
@@ -120,10 +120,11 @@ public class WebTests {
         // Выход из аккаунта
         timeout(driver, 2);
         driver.findElement(
-                By.xpath("//*[@class='ph-text svelte-1popff4']")
+                By.xpath("//*[@class='ph-item ph-item__social svelte-1popff4' and @data-testid='whiteline-account-exit']")
         ).click();
 
         // Проверка наличия на странице элемента
+        timeout(driver, 5);
         Assert.assertTrue(
                 driver.findElement(By.xpath("//a[@class='resplash-btn resplash-btn_outlined-themed resplash-btn_mailbox-big dcd-cfdg-b85yax']"))
                         .isDisplayed()
